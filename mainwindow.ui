@@ -6,17 +6,171 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>1200</width>
+    <height>675</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Memory Stalker</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <property name="windowIcon">
+   <iconset resource="wallpapers.qrc">
+    <normaloff>:/pics/ram-folder.jpg</normaloff>:/pics/ram-folder.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #1c1c1c;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="startBtn">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>220</y>
+      <width>180</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #357ABD; /* Brighter Blue background */
+    color: white; /* White text */
+    border: 2px solid #357ABD; /* Border same as background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #4B8ECD; /* Even Brighter Blue on hover */
+    border: 2px solid #4B8ECD;
+}
+
+QPushButton:pressed {
+    background-color: #2B5F8A; /* Slightly darker blue when pressed */
+    border: 2px solid #2B5F8A;
+}
+
+QPushButton:disabled {
+    background-color: #A3C4E3; /* Light blue when disabled */
+    border: 2px solid #A3C4E3;
+    color: #e0e0e0; /* Light gray text */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>START</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="tutorialBtn">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>290</y>
+      <width>180</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #66BB6A; /* Light Green background */
+    color: white; /* White text */
+    border: 2px solid #66BB6A; /* Border same as background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #81C784; /* Lighter Green on hover */
+    border: 2px solid #81C784;
+}
+
+QPushButton:pressed {
+    background-color: #4CAF50; /* Darker Green when pressed */
+    border: 2px solid #4CAF50;
+}
+
+QPushButton:disabled {
+    background-color: #B9E4C9; /* Light grayish green when disabled */
+    border: 2px solid #B9E4C9;
+    color: #e0e0e0; /* Light gray text */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>TURORIAL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="creditsBtn">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>360</y>
+      <width>180</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: #E0E0E0; /* Off-White background */
+    color: #333333; /* Dark gray text */
+    border: 2px solid #E0E0E0; /* Border same as background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #F0F0F0; /* Slightly lighter off-white on hover */
+    border: 2px solid #F0F0F0;
+}
+
+QPushButton:pressed {
+    background-color: #C0C0C0; /* Slightly darker off-white when pressed */
+    border: 2px solid #C0C0C0;
+}
+
+QPushButton:disabled {
+    background-color: #B0B0B0; /* Light gray when disabled */
+    border: 2px solid #B0B0B0;
+    color: #A0A0A0; /* Light gray text */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>CREDITS</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="wallpapers.qrc"/>
+ </resources>
  <connections/>
 </ui>

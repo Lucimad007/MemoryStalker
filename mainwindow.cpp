@@ -6,6 +6,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -13,3 +14,18 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+
+void MainWindow::on_startBtn_clicked()
+{
+
+}
+
+void MainWindow::on_tutorialBtn_clicked()
+{
+
+}
+
+void MainWindow::on_creditsBtn_clicked()
+{
+
+}

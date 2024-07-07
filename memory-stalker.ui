@@ -413,7 +413,7 @@ QPushButton:disabled {
   <widget class="QLabel" name="hitLbl">
    <property name="geometry">
     <rect>
-     <x>210</x>
+     <x>200</x>
      <y>60</y>
      <width>81</width>
      <height>51</height>
@@ -447,7 +447,7 @@ QPushButton:disabled {
   <widget class="QLabel" name="missLbl">
    <property name="geometry">
     <rect>
-     <x>360</x>
+     <x>355</x>
      <y>60</y>
      <width>91</width>
      <height>51</height>

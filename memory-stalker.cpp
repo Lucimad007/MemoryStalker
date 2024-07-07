@@ -36,3 +36,8 @@ void MemoryStalker::on_accessModeCB_currentIndexChanged(int index)
         this->ui->rangeLbl->setVisible(true);
     }
 }
+
+void MemoryStalker::on_inspectBtn_clicked()
+{
+    mainWindow->loadInspectMenu();
+}

@@ -16,17 +16,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    inspect-menu.cpp \
     main.cpp \
     mainwindow.cpp \
     memory-stalker.cpp \
     setup-menu.cpp
 
 HEADERS += \
+    inspect-menu.h \
     mainwindow.h \
     memory-stalker.h \
     setup-menu.h
 
 FORMS += \
+    inspect-menu.ui \
     mainwindow.ui \
     memory-stalker.ui \
     setup-menu.ui
@@ -37,5 +40,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-    forms.qrc \
     icons.qrc

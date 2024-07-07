@@ -23,6 +23,8 @@ private slots:
 
     void on_accessModeCB_currentIndexChanged(int index);
 
+    void on_inspectBtn_clicked();
+
 private:
     Ui::MemoryStalker *ui;
 };

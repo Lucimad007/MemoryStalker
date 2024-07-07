@@ -2,8 +2,8 @@
 #define SETUPMENU_H
 
 #include <QWidget>
-
 #include "mainwindow.h"
+#include "memory-stalker.h"
 
 extern MainWindow *mainWindow;
 

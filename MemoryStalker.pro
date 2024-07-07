@@ -18,14 +18,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    memory-stalker.cpp \
     setup-menu.cpp
 
 HEADERS += \
     mainwindow.h \
+    memory-stalker.h \
     setup-menu.h
 
 FORMS += \
     mainwindow.ui \
+    memory-stalker.ui \
     setup-menu.ui
 
 # Default rules for deployment.

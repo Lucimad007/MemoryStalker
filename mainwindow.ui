@@ -14,7 +14,7 @@
    <string>Memory Stalker</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="wallpapers.qrc">
+   <iconset resource="icons.qrc">
     <normaloff>:/pics/ram-folder.jpg</normaloff>:/pics/ram-folder.jpg</iconset>
   </property>
   <property name="styleSheet">
@@ -157,20 +157,9 @@ QPushButton:disabled {
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1200</width>
-     <height>22</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
-  <include location="wallpapers.qrc"/>
+  <include location="icons.qrc"/>
  </resources>
  <connections/>
 </ui>

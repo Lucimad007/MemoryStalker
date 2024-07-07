@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "setup-menu.h"
+#include "memory-stalker.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -13,13 +14,23 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow::loadSetupMenu()
 {
     SetupMenu *setupMenu = new SetupMenu();
+    this->centralWidget()->deleteLater();
     this->setCentralWidget(setupMenu);
 }
 
 void MainWindow::loadMainWindow()
 {
     MainWindow *window = new MainWindow();
+    this->centralWidget()->deleteLater();
     this->setCentralWidget(window);
+}
+
+
+void MainWindow::loadMemoryStalker()
+{
+    MemoryStalker *app = new MemoryStalker();
+    this->centralWidget()->deleteLater();
+    this->setCentralWidget(app);
 }
 
 MainWindow::~MainWindow()

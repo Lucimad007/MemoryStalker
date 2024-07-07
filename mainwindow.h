@@ -21,6 +21,7 @@ public:
 
     void loadSetupMenu();
     void loadMainWindow();
+    void loadMemoryStalker();
 
     ~MainWindow();
 

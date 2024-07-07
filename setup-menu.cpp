@@ -1,6 +1,7 @@
 #include "setup-menu.h"
 #include "ui_setup-menu.h"
 
+
 SetupMenu::SetupMenu(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::SetupMenu)
@@ -43,5 +44,5 @@ void SetupMenu::on_cacheLevelsCB_currentIndexChanged(int index)
 
 void SetupMenu::on_nextBtn_clicked()
 {
-
+    mainWindow->loadMemoryStalker();
 }

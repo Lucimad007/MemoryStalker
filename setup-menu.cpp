@@ -25,20 +25,26 @@ void SetupMenu::on_cacheLevelsCB_currentIndexChanged(int index)
     {
         this->ui->L2SizeCB->setVisible(false);
         this->ui->L2SizeLbl->setVisible(false);
+        this->ui->L2SpeedCB->setVisible(false);
         this->ui->L3SizeCB->setVisible(false);
         this->ui->L3SizeLbl->setVisible(false);
+        this->ui->L3SpeedCB->setVisible(false);
     } else if(index == 1)
     {
         this->ui->L2SizeCB->setVisible(true);
         this->ui->L2SizeLbl->setVisible(true);
+        this->ui->L2SpeedCB->setVisible(true);
         this->ui->L3SizeCB->setVisible(false);
         this->ui->L3SizeLbl->setVisible(false);
+        this->ui->L3SpeedCB->setVisible(false);
     } else if(index == 2)
     {
         this->ui->L2SizeCB->setVisible(true);
         this->ui->L2SizeLbl->setVisible(true);
+        this->ui->L2SpeedCB->setVisible(true);
         this->ui->L3SizeCB->setVisible(true);
         this->ui->L3SizeLbl->setVisible(true);
+        this->ui->L3SpeedCB->setVisible(true);
     }
 }
 

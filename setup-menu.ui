@@ -24,7 +24,7 @@
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>40</y>
+     <y>20</y>
      <width>140</width>
      <height>140</height>
     </rect>
@@ -130,7 +130,7 @@ QPushButton:disabled {
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>300</y>
+     <y>240</y>
      <width>160</width>
      <height>30</height>
     </rect>
@@ -195,7 +195,7 @@ QComboBox QAbstractItemView {
    <property name="geometry">
     <rect>
      <x>500</x>
-     <y>230</y>
+     <y>180</y>
      <width>200</width>
      <height>41</height>
     </rect>
@@ -216,7 +216,7 @@ border-radius: 5px;</string>
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>360</y>
+     <y>400</y>
      <width>160</width>
      <height>41</height>
     </rect>
@@ -237,7 +237,7 @@ border-radius: 5px;</string>
    <property name="geometry">
     <rect>
      <x>520</x>
-     <y>430</y>
+     <y>460</y>
      <width>160</width>
      <height>30</height>
     </rect>
@@ -305,7 +305,7 @@ QComboBox QAbstractItemView {
    <property name="geometry">
     <rect>
      <x>90</x>
-     <y>490</y>
+     <y>440</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -326,7 +326,7 @@ border-radius: 5px;</string>
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>550</y>
+     <y>500</y>
      <width>160</width>
      <height>30</height>
     </rect>
@@ -396,7 +396,7 @@ QComboBox QAbstractItemView {
    <property name="geometry">
     <rect>
      <x>350</x>
-     <y>490</y>
+     <y>440</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -417,7 +417,7 @@ border-radius: 5px;</string>
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>490</y>
+     <y>510</y>
      <width>71</width>
      <height>41</height>
     </rect>
@@ -440,7 +440,7 @@ border-radius: 5px;
    <property name="geometry">
     <rect>
      <x>810</x>
-     <y>490</y>
+     <y>440</y>
      <width>81</width>
      <height>41</height>
     </rect>
@@ -461,7 +461,7 @@ border-radius: 5px;</string>
    <property name="geometry">
     <rect>
      <x>1020</x>
-     <y>490</y>
+     <y>440</y>
      <width>120</width>
      <height>41</height>
     </rect>
@@ -482,7 +482,7 @@ border-radius: 5px;</string>
    <property name="geometry">
     <rect>
      <x>300</x>
-     <y>550</y>
+     <y>500</y>
      <width>160</width>
      <height>30</height>
     </rect>
@@ -542,7 +542,7 @@ QComboBox QAbstractItemView {
    <property name="geometry">
     <rect>
      <x>530</x>
-     <y>550</y>
+     <y>570</y>
      <width>160</width>
      <height>30</height>
     </rect>
@@ -607,7 +607,7 @@ QComboBox QAbstractItemView {
    <property name="geometry">
     <rect>
      <x>770</x>
-     <y>550</y>
+     <y>500</y>
      <width>160</width>
      <height>30</height>
     </rect>
@@ -672,7 +672,7 @@ QComboBox QAbstractItemView {
    <property name="geometry">
     <rect>
      <x>1000</x>
-     <y>550</y>
+     <y>500</y>
      <width>160</width>
      <height>30</height>
     </rect>
@@ -725,6 +725,412 @@ QComboBox QAbstractItemView {
    <item>
     <property name="text">
      <string>256GB</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="L1SpeedCB">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="L2SpeedCB">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>12</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>25</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="L3SpeedCB">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>620</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>30</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>40</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="ramSpeedCB">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>50</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>70</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>100</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="hardDriveSpeedCB">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>3000000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>10000000</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>15000000</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="blockSizeLbl">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>290</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white; 
+font-size: 16px; 
+font-weight: bold;
+ padding: 10px;
+ border: 2px solid #3498db; 
+border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Block Size</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="blockSizeCB">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>350</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>12</string>
     </property>
    </item>
   </widget>

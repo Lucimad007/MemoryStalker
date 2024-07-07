@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>pics/ram-folder.jpg</file>
+        <file>pics/ram-gradient.png</file>
+        <file>pics/ram-gradient-140x140.png</file>
     </qresource>
 </RCC>

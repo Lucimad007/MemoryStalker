@@ -4,6 +4,9 @@
 #include <QMainWindow>
 #include <QGridLayout>
 #include <QLabel>
+#include <QUiLoader>
+#include <QFile>
+#include <QDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -15,6 +18,10 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
+
+    void loadSetupMenu();
+    void loadMainWindow();
+
     ~MainWindow();
 
 private slots:
@@ -26,5 +33,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QWidget *originalWidget;
 };
 #endif // MAINWINDOW_H

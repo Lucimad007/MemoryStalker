@@ -1,0 +1,736 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SetupMenu</class>
+ <widget class="QWidget" name="SetupMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>675</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Memory Stalker</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/pics/ram-folder.jpg</normaloff>:/pics/ram-folder.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #1c1c1c;</string>
+  </property>
+  <widget class="QGraphicsView" name="ramView">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>40</y>
+     <width>140</width>
+     <height>140</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/pics/ram-gradient-140x140.png);
+background-color: white;
+border: transparent;
+border-radius: 70px;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="nextBtn">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>600</y>
+     <width>180</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #66BB6A; /* Light Green background */
+    color: white; /* White text */
+    border: 2px solid #66BB6A; /* Border same as background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #81C784; /* Lighter Green on hover */
+    border: 2px solid #81C784;
+}
+
+QPushButton:pressed {
+    background-color: #4CAF50; /* Darker Green when pressed */
+    border: 2px solid #4CAF50;
+}
+
+QPushButton:disabled {
+    background-color: #B9E4C9; /* Light grayish green when disabled */
+    border: 2px solid #B9E4C9;
+    color: #e0e0e0; /* Light gray text */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>NEXT</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backBtn">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>600</y>
+     <width>180</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #E0E0E0; /* Off-White background */
+    color: #333333; /* Dark gray text */
+    border: 2px solid #E0E0E0; /* Border same as background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #F0F0F0; /* Slightly lighter off-white on hover */
+    border: 2px solid #F0F0F0;
+}
+
+QPushButton:pressed {
+    background-color: #C0C0C0; /* Slightly darker off-white when pressed */
+    border: 2px solid #C0C0C0;
+}
+
+QPushButton:disabled {
+    background-color: #B0B0B0; /* Light gray when disabled */
+    border: 2px solid #B0B0B0;
+    color: #A0A0A0; /* Light gray text */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>BACK</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="replacementPolicyCB">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>300</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>LRU</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>FIFO</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>RANDOM</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="replacementPolicyLbl">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>230</y>
+     <width>200</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white; 
+font-size: 16px; 
+font-weight: bold;
+ padding: 10px;
+ border: 2px solid #3498db; 
+border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Replacement Policy</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cacheLevelsLbl">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>360</y>
+     <width>160</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white; 
+font-size: 16px; 
+font-weight: bold;
+ padding: 10px;
+ border: 2px solid #3498db; 
+border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Levels of Cache</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cacheLevelsCB">
+   <property name="geometry">
+    <rect>
+     <x>520</x>
+     <y>430</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <property name="currentIndex">
+    <number>2</number>
+   </property>
+   <item>
+    <property name="text">
+     <string>L1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1, L2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>L1, L2, L3</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="L1SizeLbl">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>490</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white; 
+font-size: 12px; 
+font-weight: bold;
+ padding: 10px;
+ border: 2px solid #3498db; 
+border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>L1 size</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="L1SizeCB">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>2KB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4KB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16KB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>64KB</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QLabel" name="L2SizeLbl">
+   <property name="geometry">
+    <rect>
+     <x>350</x>
+     <y>490</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white; 
+font-size: 12px; 
+font-weight: bold;
+ padding: 10px;
+ border: 2px solid #3498db; 
+border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>L2 size</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="L3SizeLbl">
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>490</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white; 
+font-size: 12px; 
+font-weight: bold;
+ padding: 10px;
+ border: 2px solid #3498db; 
+border-radius: 5px;
+
+</string>
+   </property>
+   <property name="text">
+    <string>L3 size</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="ramSizeLbl">
+   <property name="geometry">
+    <rect>
+     <x>810</x>
+     <y>490</y>
+     <width>81</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white; 
+font-size: 12px; 
+font-weight: bold;
+ padding: 10px;
+ border: 2px solid #3498db; 
+border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>RAM size</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="hardDriveSizeLbl">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>490</y>
+     <width>120</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: white; 
+font-size: 12px; 
+font-weight: bold;
+ padding: 10px;
+ border: 2px solid #3498db; 
+border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Hard Drive size</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="L2SizeCB">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>256KB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>512KB</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="L3SizeCB">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>3MB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4MB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8MB</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="ramSizeCB">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>4GB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>8GB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>16GB</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QComboBox" name="hardDriveSizeCB">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>550</y>
+     <width>160</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/* Style for the combo box */
+QComboBox {
+    background-color: #333333; /* Dark background */
+    color: #FFFFFF; /* White text */
+    border: 2px solid #555555; /* Dark gray border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px;
+    font-size: 14px;
+}
+
+/* Style for the combo box when it is focused */
+QComboBox:focus {
+    border: 2px solid #777777; /* Lighter gray border when focused */
+}
+
+/* Style for the drop-down arrow */
+QComboBox::drop-down {
+    background-color: #333333; /* Dark background */
+    border-left: 2px solid #555555; /* Dark gray border on the left */
+    width: 25px;
+}
+
+/* Style for the down arrow inside the drop-down */
+QComboBox::down-arrow {
+    image: url(:/down-arrow.png); /* Path to your custom down arrow image */
+    width: 16px;
+    height: 16px;
+}
+
+/* Style for the combo box popup (the drop-down list) */
+QComboBox QAbstractItemView {
+    background-color: #333333; /* Dark background for the drop-down list */
+    color: #FFFFFF; /* White text for the items */
+    selection-background-color: #555555; /* Dark gray background for selected item */
+    selection-color: #FFFFFF; /* White text for selected item */
+    border: 1px solid #555555; /* Dark gray border */
+}
+</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>128GB</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>256GB</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -41,7 +41,7 @@ void InspectMenu::on_showBtn_clicked()
 
         switch (ui->memoryCB->currentIndex()) {
         case 0:
-            if(address < 0 || address > randMemory->getL1().getSize())
+            if(address < 0 || address >= randMemory->getL1().getSize())
             {
                 ui->addressErrorLbl->setVisible(true);
                 return;
@@ -58,7 +58,7 @@ void InspectMenu::on_showBtn_clicked()
                 return;
             }
 
-            if(address < 0 || address > randMemory->getL2().getSize())
+            if(address < 0 || address >= randMemory->getL2().getSize())
             {
                 ui->addressErrorLbl->setVisible(true);
                 return;
@@ -75,7 +75,7 @@ void InspectMenu::on_showBtn_clicked()
                 return;
             }
 
-            if(address < 0 || address > randMemory->getL3().getSize())
+            if(address < 0 || address >= randMemory->getL3().getSize())
             {
                 ui->addressErrorLbl->setVisible(true);
                 return;
@@ -87,7 +87,7 @@ void InspectMenu::on_showBtn_clicked()
             break;
         case 3:
 
-            if(address < 0 || address > randMemory->getRAM().getSize())
+            if(address < 0 || address >= randMemory->getRAM().getSize())
             {
                 ui->addressErrorLbl->setVisible(true);
                 return;

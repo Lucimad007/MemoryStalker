@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addresscalculator.cpp \
     cache.cpp \
     credits-menu.cpp \
     inspect-menu.cpp \
@@ -26,6 +27,7 @@ SOURCES += \
     setup-menu.cpp
 
 HEADERS += \
+    addresscalculator.h \
     cache.h \
     credits-menu.h \
     inspect-menu.h \

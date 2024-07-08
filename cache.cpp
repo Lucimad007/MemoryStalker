@@ -122,3 +122,13 @@ void Cache::setValues(long long **value)
 {
     values = value;
 }
+
+int Cache::getBlockSize() const
+{
+    return blockSize;
+}
+
+void Cache::setBlockSize(int value)
+{
+    blockSize = value;
+}

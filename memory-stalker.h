@@ -25,6 +25,8 @@ private slots:
 
     void on_inspectBtn_clicked();
 
+    void on_analysisBtn_clicked();
+
 private:
     Ui::MemoryStalker *ui;
 };

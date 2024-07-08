@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>piecharts.py</file>
+        <file>AMATs.py</file>
+    </qresource>
+</RCC>

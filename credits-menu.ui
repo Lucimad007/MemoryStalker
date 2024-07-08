@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CreditsMenu</class>
+ <widget class="QWidget" name="CreditsMenu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>675</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Memory Stalker</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/pics/ram-folder.jpg</normaloff>:/pics/ram-folder.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(28, 28, 28);</string>
+  </property>
+  <widget class="QPushButton" name="backBtn">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>600</y>
+     <width>180</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #E0E0E0; /* Off-White background */
+    color: #333333; /* Dark gray text */
+    border: 2px solid #E0E0E0; /* Border same as background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: #F0F0F0; /* Slightly lighter off-white on hover */
+    border: 2px solid #F0F0F0;
+}
+
+QPushButton:pressed {
+    background-color: #C0C0C0; /* Slightly darker off-white when pressed */
+    border: 2px solid #C0C0C0;
+}
+
+QPushButton:disabled {
+    background-color: #B0B0B0; /* Light gray when disabled */
+    border: 2px solid #B0B0B0;
+    color: #A0A0A0; /* Light gray text */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>BACK</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="smfLbl">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>190</y>
+     <width>261</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: white; /* White text */
+    background-color: #2C2C2C; /* Dark background */
+    border: 2px solid #3A3A3A; /* Slightly lighter border */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background: qlineargradient(
+        x1: 0, y1: 0, 
+        x2: 0, y2: 1, 
+        stop: 0 #3A3A3A, 
+        stop: 1 #2C2C2C
+    ); /* Vertical gradient */
+
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Sayed Mohammad Fatemi</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="masLbl">
+   <property name="geometry">
+    <rect>
+     <x>495</x>
+     <y>290</y>
+     <width>211</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: white; /* White text */
+    background-color: #2C2C2C; /* Dark background */
+    border: 2px solid #3A3A3A; /* Slightly lighter border */
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    background: qlineargradient(
+        x1: 0, y1: 0, 
+        x2: 0, y2: 1, 
+        stop: 0 #3A3A3A, 
+        stop: 1 #2C2C2C
+    ); /* Vertical gradient */
+
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Matin Amin Saboori</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

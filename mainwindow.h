@@ -2,10 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QGridLayout>
 #include <QLabel>
-#include <QUiLoader>
-#include <QFile>
 #include <QDebug>
 
 QT_BEGIN_NAMESPACE
@@ -23,6 +20,7 @@ public:
     void loadMainWindow();
     void loadMemoryStalker();
     void loadInspectMenu();
+    void loadCreditsMenu();
 
     ~MainWindow();
 

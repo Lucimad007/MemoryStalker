@@ -3,6 +3,7 @@
 #include "setup-menu.h"
 #include "memory-stalker.h"
 #include "inspect-menu.h"
+#include "credits-menu.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -41,6 +42,13 @@ void MainWindow::loadInspectMenu()
     this->setCentralWidget(app);
 }
 
+void MainWindow::loadCreditsMenu()
+{
+    CreditsMenu *app = new CreditsMenu();
+    this->centralWidget()->deleteLater();
+    this->setCentralWidget(app);
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -59,5 +67,5 @@ void MainWindow::on_tutorialBtn_clicked()
 
 void MainWindow::on_creditsBtn_clicked()
 {
-
+    loadCreditsMenu();
 }

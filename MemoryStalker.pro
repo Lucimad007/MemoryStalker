@@ -16,6 +16,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    credits-menu.cpp \
     inspect-menu.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -23,12 +24,14 @@ SOURCES += \
     setup-menu.cpp
 
 HEADERS += \
+    credits-menu.h \
     inspect-menu.h \
     mainwindow.h \
     memory-stalker.h \
     setup-menu.h
 
 FORMS += \
+    credits-menu.ui \
     inspect-menu.ui \
     mainwindow.ui \
     memory-stalker.ui \

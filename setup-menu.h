@@ -4,7 +4,9 @@
 #include <QWidget>
 #include "mainwindow.h"
 #include "memory-stalker.h"
+#include "memoryhierarchy.h"
 
+extern MemoryHierarchy *randMemory;
 extern MainWindow *mainWindow;
 
 namespace Ui {

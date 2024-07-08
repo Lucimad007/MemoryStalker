@@ -6,6 +6,37 @@ class Cache
 {
 public:
     Cache();
+    Cache(int cycles, int penalty, long long size, int blockSize);
+
+    int getCycles() const;
+    void setCycles(int value);
+
+    int getPenalty() const;
+    void setPenalty(int value);
+
+    int getAccessNum() const;
+    void setAccessNum(int value);
+
+    int getHits() const;
+    void setHits(int value);
+
+    int getMisses() const;
+    void setMisses(int value);
+
+    long long getSize() const;
+    void setSize(long long value);
+
+    double getAMAT() const;
+    void setAMAT(double value);
+
+    bool *getValids() const;
+    void setValids(bool *value);
+
+    long long *getTags() const;
+    void setTags(long long *value);
+
+    long long **getValues() const;
+    void setValues(long long **value);
 
 private:
     int cycles;     //speed of acces
@@ -13,7 +44,8 @@ private:
     int accessNum = 0;  //how many times we have used it
     int hits = 0;
     int misses = 0;
-    int size;
+    long long size;
+    int blockSize = 12;
     double AMAT;    //average memory access time
     bool *valids;
     long long *tags;

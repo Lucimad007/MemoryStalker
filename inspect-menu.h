@@ -21,6 +21,8 @@ public:
 private slots:
     void on_backBtn_clicked();
 
+    void on_showBtn_clicked();
+
 private:
     Ui::InspectMenu *ui;
 };

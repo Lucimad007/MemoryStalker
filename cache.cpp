@@ -23,6 +23,23 @@ Cache::Cache(int cycles, int penalty, long long size, int blockSize)
     this->blockSize = blockSize;
 }
 
+int Cache::value(int index, int offset)
+{
+    return values[index][offset];
+}
+int Cache::tag(int index)
+{
+    return  tags[index];
+}
+
+int Cache::valid(int index)
+{
+    if(valids[index])
+        return 1;
+    else
+        return 0;
+}
+
 int Cache::getCycles() const
 {
     return cycles;

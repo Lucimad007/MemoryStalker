@@ -38,6 +38,13 @@ public:
     long long **getValues() const;
     void setValues(long long **value);
 
+    int getBlockSize() const;
+    void setBlockSize(int value);
+
+    int value(int index, int offset);
+    int tag(int index);
+    int valid(int index);
+
 private:
     int cycles;     //speed of acces
     int penalty;    //speed of next layer !
